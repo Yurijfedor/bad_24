@@ -1,0 +1,12 @@
+{
+  "name": "bad_24",
+  "version": "1.0.0",
+  "description": "This script is designed to find the maximum, minimum, median, and mean values of a large set of integers stored in a text file. Additionally, it can identify the longest increasing and decreasing sequences of numbers.",
+  "main": "solution.js",
+  "scripts": {
+    "start": "node solution.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
