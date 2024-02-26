@@ -31,22 +31,18 @@ function findMaxMinMedianMeanAndSequences(filePath) {
             sum += num;
             count++;
 
-            // Перевіряємо чи можемо додати число до послідовності, яка збільшується
             if (num > (increasingSequence.length > 0 ? increasingSequence[increasingSequence.length - 1] : -Infinity)) {
                 increasingSequence.push(num);
             } else {
-                // Якщо не можемо, порівнюємо довжину поточної послідовності з найбільшою та оновлюємо при потребі
                 if (increasingSequence.length > 1 && increasingSequence.length > longestIncreasingSequence.length) {
                     longestIncreasingSequence = [...increasingSequence];
                 }
                 increasingSequence = [num];
             }
 
-            // Перевіряємо чи можемо додати число до послідовності, яка зменшується
             if (num < (decreasingSequence.length > 0 ? decreasingSequence[decreasingSequence.length - 1] : Infinity)) {
                 decreasingSequence.push(num);
             } else {
-                // Якщо не можемо, порівнюємо довжину поточної послідовності з найбільшою та оновлюємо при потребі
                 if (decreasingSequence.length > 1 && decreasingSequence.length > longestDecreasingSequence.length) {
                     longestDecreasingSequence = [...decreasingSequence];
                 }
@@ -93,7 +89,7 @@ function binarySearch(arr, targetIndex) {
     return null;
 }
 
-const filePath = 'F:/test/10m.txt';
+const filePath = '10m.txt';
 let longestIncreasingSequence = [];
 let longestDecreasingSequence = [];
 findMaxMinMedianMeanAndSequences(filePath)
